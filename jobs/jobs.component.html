@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<br><br><br>
+<div class="latest-jobs">
+    <h1>Latest Jobs in JobSeekho</h1>
+</div>
+
+
+<div class="search-div">
+    <div class="input-div">
+        <input type="text" id="fullName" class="input-field" name="fullName" placeholder="Search"
+            required (change)="filterJobs()" value="{{searchValue}}" #searchInput  >
+    </div>
+    <div class="nationality">
+        <label for="nationality">Nationality</label>
+        <select name="nationality" id="nationality" [value]="locationValue" #location>
+            <option value="Location">Location</option>
+            <option value="India">India</option>
+            <option value="America">America</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Canada">Canada</option>
+            <option value="China">china</option>
+        </select>
+    </div>
+    <div class="nationality">
+        <label for="">Salary</label>
+        <select name="nationality" id="nationality"  [value]="salaryValue" #salary>
+            <option value="Select salary">Select salary</option>
+            <option value="50,000">  < 50,000</option>
+            <option value="50,000 - 1,00,000">50,000 - 1,00,000</option>
+            <option value="1,00,000 - 2,00,000">1,00,000 - 2,00,000</option>
+            <option value="> 2,00,000">> 2,00,000</option>
+        </select>
+    </div>
+    <button (click)="resetFilters()" class="btn">Clear</button>
+</div>
+
+<div class="container">
+    
+    <div class="jobs-container" #jobscontainer>
+        <!---
+        <div class="job">
+            <div class="job-details1">
+                <button>
+                    <div class="hiring-msg">
+                        <i class="fa-solid fa-arrow-trend-up  ah"></i>
+                        <p>Actively Hiring</p>
+                    </div>
+                </button>
+                <p class="job-title">Full Stack Developer</p>
+                <p class="company-name">CapGemini</p>
+            </div>
+            <div class="job-details2">
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Gurgon</p>
+                </div>
+                <div class="location">
+                    <i class="fa-solid fa-money-bill"></i>
+                    <p>30,000</p>
+                </div>
+                <div class="location">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <p>6 months</p>
+                </div>
+            </div>
+            <div class="job-footer">
+                <button>Full Time</button>
+                <a routerLink="/job-application">View details</a>
+                <i class="fa-solid fa-greater-than"></i>
+            </div>
+        </div>
+    -->
+    
+        
+    </div>
+
+    
+</div>

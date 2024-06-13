@@ -1,0 +1,193 @@
+<img src="../../assets/login/pexels-pixabay-461064.jpg" alt="">
+<div class="parent" *ngIf="showModal!=true">
+    <h1>Graduate Profile</h1>
+
+    <div class="employer-details">
+        <div class="employer-info">
+            <div class="header">
+                <div class="name">
+                    <h3>{{userName}}</h3>
+                </div>
+                <div class="btn">
+                    <button (click)="deleteGraduate()" *ngIf="this.dataService.isAdmin" >Remove Graduate</button>
+                    <button class="green" (click)="editGraduate()" *ngIf="this.dataService.isAdmin != true" >Edit Graduate</button>
+                    <button (click)="this.authService.logout()" *ngIf="this.dataService.isAdmin != true" >Log Out</button>
+                </div>
+                
+            </div>
+            <hr>
+            <div class="all-details">
+                <div class="details">
+                    <i class="fa fa-id-badge"></i>
+                    <div class="d1">
+                        <h4>Role Id</h4>
+                        <p>{{roleId}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <div class="d1">
+                        <h4>Email</h4>
+                        <p>{{userMail}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-mobile"></i>
+                    <div class="d1">
+                        <h4>Phone No</h4>
+                        <p>{{phoneNo}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-person-half-dress"></i>
+                    <div class="d1">
+                        <h4>Gender</h4>
+                        <p>{{gender}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-cake-candles"></i>
+                    <div class="d1">
+                        <h4>Date of Birth</h4>
+                        <p>{{dateOfBirth}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="d1">
+                        <h4>address</h4>
+                        <p>{{address}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-globe"></i>
+                    <div class="d1">
+                        <h4>Nation</h4>
+                        <p>{{nationality}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div class="d1">
+                        <h4>college</h4>
+                        <p>{{college}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="d1">
+                        <h4>college Address</h4>
+                        <p>{{collegeAddress}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <div class="d1">
+                        <h4>skills</h4>
+                        <p>{{skills}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fas fa-project-diagram"></i>
+                    <div class="d1">
+                        <h4>project</h4>
+                        <p>{{project}}</p>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <div class="jobs-info">
+            <h2>Jobs Applied</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>phone No</th>
+                        <th>college</th>
+                        <th>College Address</th>
+                        <th>Year of Passing</th>
+                        <th>Skills</th>
+                        <th>Percentage</th>
+                        <th>Project</th>
+                        <th>Resume</th>
+                    </tr>
+                </thead>
+                <tbody #table>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<div class="edit-employer" *ngIf="showModal">
+    <div class="employer-form">
+        
+        <div class="unchanged">
+            <label for="">Role Id</label>
+            <p>{{roleId}}</p>
+        </div>
+        <div class="unchanged">
+            <label for="">userMail</label>
+            <p>{{userName}}</p>
+        </div>
+        <div class="unchanged">
+            <label for="">userMail</label>
+            <p>{{userMail}}</p>
+        </div>
+
+        <div class="input-div">
+            <label for="">Phone No</label>
+            <input type="text" class="input-field" placeholder="phone No" #phoneNo1>
+        </div>
+
+        <div class="gender-div">
+            <label>Gender </label>
+            <div class="gender-info">
+                <input type="radio" name="gender" id="male" value="Male" #male>
+            &nbsp;
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" id="female" value="FeMale" #female>
+            &nbsp;
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="FeMale" #other>
+            &nbsp;
+            <label for="female">Other</label>
+            </div>
+        </div>
+        <div class="dob-div">
+            <label for="DOB">Date of Birth&nbsp;</label>
+            <input type="date" id="DOB" name="DOB" required placeholder="dd-mm-yyyy" #dob1>
+        </div>
+        <div class="input-div">
+            <label for="">Address</label>
+            <input type="text" class="input-field" placeholder="Address" #address1>
+        </div>
+        <div class="input-div">
+            <label for="">Nation</label>
+            <input type="text" class="input-field" placeholder="nationality" #nationality1>
+        </div>
+        <div class="input-div">
+            <label for="">college</label>
+            <input type="text" class="input-field" placeholder="College" #college1>
+        </div>
+        <div class="input-div">
+            <label for="">College Address</label>
+            <input type="text" class="input-field" placeholder="College Address" #collegeAddress1>
+        </div>
+        <div class="input-div">
+            <label for="">skills</label>
+            <input type="text" class="input-field" placeholder="skills" #skills1>
+        </div>
+        <div class="input-div">
+            <label for="">project</label>
+            <input type="text" class="input-field" placeholder="project" #project1>
+        </div>
+        <button class="btn green" (click)="edit()">Save</button>
+    </div>
+    
+</div>
+<br><br><br>

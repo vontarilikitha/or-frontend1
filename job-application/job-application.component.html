@@ -1,0 +1,183 @@
+<br><br><br>
+<div class="parent">
+    <div class="job-information">
+
+        <button>
+            <div class="hiring-msg">
+                <i class="fa-solid fa-arrow-trend-up  ah"></i>
+                <p>Actively Hiring</p>
+            </div>
+        </button>
+        <div class="company-name">
+            <h4>{{jobName}}</h4>
+            <p >{{companyName}}</p>
+
+        </div>
+        <div class="job-details2">
+            <div class="location">
+                <p><i class="fa-solid fa-location-dot"></i>Location</p>
+                <p >{{jobLocation}}</p>
+            </div>
+            <div class="location">
+                <p><i class="fa-solid fa-money-bill"></i>Salary</p>
+                <p >{{salary}}</p>
+            </div>
+            <div class="location">
+                <p><i class="fa fa-calendar" aria-hidden="true"></i>Duration</p>
+                <p>6 months</p>
+            </div>
+        </div>
+        <hr class="hr">
+        <div class="about-job">
+            <h4>About the Job</h4>
+            <p>{{jobDescription}}</p>
+        </div>
+        <div class="responsibilities">
+            <h4>Skills</h4>
+            <ol>
+                <li>Design and develop commercial/enterprise web applications</li>
+                <li>Ensure application performance, quality, and responsiveness</li>
+                <li>Collaborate with different teams, from core application development to integrations and data science</li>
+                <li>Team-oriented, with a willingness to work as part of a collaborative environment</li>
+            </ol>
+        </div>
+
+        <div class="openings">
+            <h4>No of Openings</h4>
+            <p>{{noOfOpenings}}</p>
+        </div>
+
+        <hr class="hr">
+    </div>
+    <div class="jobApplication" >
+        <div class="job-form">
+            <div class="fill-form">
+                <h4>Please Fill Form</h4>
+            </div>
+            <div class="input-div">
+                <label for="">Full Name<div class="star">&nbsp;*</div></label>
+                <input type="text"
+                placeholder="Enter your first name"
+                class="input-field"
+                #fullName
+                required
+                >
+            </div>
+            <div class="input-div">
+                <label for="">Email Address <div class="star">&nbsp;*</div> </label>
+                <input type="email"
+                placeholder="Enter your email address"
+                class="input-field"
+                #email
+                required
+                >
+            </div>
+            <div class="input-div">
+                <label for="">Contact Number<div class="star">&nbsp;*</div></label>
+                <input type="text"
+                placeholder="Enter your contact number"
+                class="input-field"
+                required
+                >
+            </div>
+            <div class="input-div">
+                <label for="">College<div class="star">&nbsp;*</div></label>
+                <input type="text"
+                placeholder="College Name"
+                class="input-field"
+                #collegeName
+                required
+                >
+            </div>
+            <div class="input-div">
+                <label for="">College Address<div class="star">&nbsp;*</div></label>
+                <input type="text"
+                placeholder="College Address"
+                class="input-field"
+                #collegeAddress
+                required
+                >
+            </div>
+            <div class="date-div">
+                <label for="">Year of Passing<div class="star">&nbsp;*</div></label>
+                <input type="date"
+                placeholder="DD/MM/YYYY"
+                class="input-field"
+                #yearOfPassing
+                required
+                >
+            </div>
+            <div class="input-div">
+                <label for="">Percentage<div class="star">&nbsp;*</div></label>
+                <input type="text"
+                placeholder="Enter your academic Percentage"
+                class="input-field"
+                #percentage
+                required
+                >
+            </div>
+            <div class="input-div">
+                <label for="">Key Skills<div class="star">&nbsp;*</div></label>
+                <input type="text"
+                placeholder="Enter your key skills"
+                class="input-field"
+                #skills
+                required
+                >
+            </div>
+            <div class="input-div">
+                <label for="">Project<div class="star">&nbsp;*</div></label>
+                <input type="text"
+                placeholder="Enter your project"
+                class="input-field"
+                #project
+                required
+                >
+            </div>
+            <div class="input-div">
+                <label for="">Paste your Resume<div class="star">&nbsp;*</div></label>
+                <input type="file"
+                (change)="onFileSelected($event)"
+                class="input-field"
+                #resume
+                required
+                >
+            </div>
+            <button class="btn" (click)="sendMailToEmployer()" >Apply</button>
+        </div>
+
+
+
+
+
+
+
+    <!----
+        <div class="sponsors">
+            <h1>Sponsors</h1>
+
+            <div class="company">
+                <img src="../../assets/companies/dell.png" alt="dell">
+                <h3>Dell Technologies</h3>
+            </div>
+            <div class="company">
+                <img src="../../assets/companies/infosys.jpeg" alt="infosys">
+                <h3>Infosys</h3>
+            </div>
+            <div class="company">
+                <img src="../../assets/companies/nvidia.png" alt="nvidia">
+                <h3>Nvidia</h3>
+            </div>
+            <div class="company">
+                <img src="../../assets/companies/tcs.png" alt="tcs">
+                <h3>Tata Consultancy Services</h3>
+            </div>
+            <div class="company">
+                <img src="../../assets/companies/jpMorgon.jpg" alt="jpMorgon">
+                <h3>JPMorgon</h3>
+            </div>
+        </div>
+    </div>
+-->
+    
+</div>

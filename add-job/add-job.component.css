@@ -1,0 +1,181 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+
+}
+
+.im{
+    width: 100%;
+    position: absolute;
+    background-size: center;
+    background-position: center;
+    z-index: -1;
+}
+
+.parent{
+    margin-left: 240px;
+    margin-bottom: 20px;
+    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    padding: 60px 60px 60px 60px;
+
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner{
+    margin-left: 240px;
+    width: 60%;
+    height: 60%;
+}
+
+.title{
+    margin-bottom: 20px;
+}
+
+
+.add-job{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 50px;
+}
+
+.job-form{
+    margin-left: 60px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.star{
+    color: red;
+}
+
+
+.input-div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.input-div label{
+    width: 40%;
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+}
+.input-div input{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+label{
+    font-weight: 600;
+}
+
+.input-field{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    border: 2px solid gray;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+input{
+    flex: 5;
+    background: none;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.nationality{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+.nationality label{
+    width: 44%;
+    font-size: 20px;
+    color:#333;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+}
+.nationality select{
+    border: 2px solid gray;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    height: 40px;
+    outline: none;
+    padding-left: 10px;
+    width: 68%;
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+}
+
+.textarea{
+    width: 60%;
+    height: 40px;
+    margin: 10px 0;
+    border: 2px solid #c5c3c3;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-left: 7px;
+}
+
+.agree{
+    padding-top: 8px;
+}
+
+.agree p{
+    padding-top: 5px;
+    line-height: 20px;
+}
+
+.btn{
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 7px 7px;
+    background-color:  #00A5EC;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: whitesmoke;
+    background-color: rgb(41, 41, 185);
+}

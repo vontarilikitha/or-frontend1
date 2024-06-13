@@ -1,0 +1,154 @@
+<img src="../../assets/login/pexels-pixabay-461064.jpg" alt="">
+<div class="parent" *ngIf="showModal!=true">
+    <h1>Employer Profile</h1>
+
+    <div class="employer-details">
+        <div class="employer-info">
+            <div class="header">
+                <div class="name">
+                    <i class="fa-regular fa-user"></i>
+                    <h3>{{userName}}</h3>
+                </div>
+                <div class="btn">
+                    <button (click)="deleteEmployer()"  *ngIf="this.dataService.isAdmin" >Remove Employer</button>
+                    <button class="green" (click)="editEmployer()" *ngIf="this.dataService.isAdmin != true" >Edit Employer</button>
+                    <button (click)="this.authService.logout()" *ngIf="this.dataService.isAdmin != true" >Log Out</button>
+                </div>
+                
+            </div>
+            <hr>
+            <div class="all-details">
+                <div class="details">
+                    <i class="fa fa-id-badge"></i>
+                    <div class="d1">
+                        <h4>Role Id</h4>
+                        <p>{{roleId}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <div class="d1">
+                        <h4>Email</h4>
+                        <p>{{userMail}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-mobile"></i>
+                    <div class="d1">
+                        <h4>Phone No</h4>
+                        <p>{{phoneNo}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="d1">
+                        <h4>address</h4>
+                        <p>{{address}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-globe"></i>
+                    <div class="d1">
+                        <h4>Nation</h4>
+                        <p>{{nationality}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-city"></i>
+                    <div class="d1">
+                        <h4>company</h4>
+                        <p>{{company}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="d1">
+                        <h4>company Address</h4>
+                        <p>{{companyAddress}}</p>
+                    </div>
+                </div>
+                
+                <div class="details">
+                    <i class="fa-solid fa-industry"></i>
+                    <div class="d1">
+                        <h4>sector</h4>
+                        <p>{{sector}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-people-group"></i>
+                    <div class="d1">
+                        <h4>company Size</h4>
+                        <p>{{companySize}}</p>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <div class="jobs-info">
+            <h2>Jobs Posted</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>company</th>
+                        <th>Job Name</th>
+                        <th>job type</th>
+                        <th>salary</th>
+                        <th>Company Address</th>
+                        <th>description</th>
+                        <th>vacancy</th>
+                    </tr>
+                </thead>
+                <tbody #table>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="edit-employer" *ngIf="showModal">
+    <div class="employer-form">
+        
+        <div class="unchanged">
+            <label for="">Role Id</label>
+            <p>{{roleId}}</p>
+        </div>
+        <div class="unchanged">
+            <label for="">userMail</label>
+            <p>{{userMail}}</p>
+        </div>
+
+        <div class="input-div">
+            <label for="">Phone No</label>
+            <input type="text" class="input-field" placeholder="phone No" #phoneNo1>
+        </div>
+
+        <div class="input-div">
+            <label for="">Address</label>
+            <input type="text" class="input-field" placeholder="Company Address" #address1>
+        </div>
+        <div class="input-div">
+            <label for="">Nation</label>
+            <input type="text" class="input-field" placeholder="nationality" #nationality1>
+        </div>
+        <div class="input-div">
+            <label for="">company</label>
+            <input type="text" class="input-field" placeholder="Company " #company1>
+        </div>
+        <div class="input-div">
+            <label for="">Company Address</label>
+            <input type="text" class="input-field" placeholder="Company Address" #companyAddress1>
+        </div>
+        <div class="input-div">
+            <label for="">sector</label>
+            <input type="text" class="input-field" placeholder="sector" #sector1>
+        </div>
+        <div class="input-div">
+            <label for="">company Size</label>
+            <input type="text" class="input-field" placeholder="CompanySize" #companySize1>
+        </div>
+        <button class="btn green" (click)="edit()">Save</button>
+    </div>
+    
+</div>
+<br><br><br>

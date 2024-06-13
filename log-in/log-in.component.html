@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="containers">
+    <img src="../../assets/login/blue2.jpeg" alt="" class="img">
+        <div class="container">
+            <div class="sign-in">
+                <form action="javascript:void(0)" class="sign-in-form">
+                    <h2 class="title">Log in</h2>
+                    <div class="input-field">
+                        <label for="emailId"></label>
+                        <i class="fas fa-user"></i>
+                        <input type="email"  id="emailId" name="emailId"  placeholder="Email Id" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" #emailId>
+                        
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa fa-id-badge"></i>
+                        <input type="text" placeholder="Role Id" #roleId>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="password"></label>
+                        <i class="fas fa-lock"></i>
+                        <input type="password"  id="password" name="password" placeholder="Password"  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$" required #password>
+                    </div>
+
+                    <input type="submit" value="Login" class="btn"  (click)="call()">
+                    <p *ngIf="errorMessage" ngClass="errorMessage">Incorrect Email or Password</p>
+                    <p  class="forgotPassword">
+                        <a href="#" >Reset Password?</a>
+                    </p>
+                    <p class="account-text">Don't have an account? &nbsp;  
+                        
+                    <a   routerLink="/signup" class="sign-up"  >Sign up</a></p>
+                    
+                </form>
+            </div>
+        </div>
+</div>

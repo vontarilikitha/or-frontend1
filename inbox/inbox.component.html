@@ -1,0 +1,60 @@
+<img src="../../assets/login/pexels-pixabay-461064.jpg" alt="">
+
+<div class="container">
+    <div class="btn-area">
+        <h2>Inbox</h2>
+        <button  (click)="compose()">+&nbsp;&nbsp;COMPOSE</button>
+    </div>
+    <div class="messages" #messages>
+        
+        
+        <!--
+            <div class="task">
+            <div class="btn-area2">
+                <div class="to">
+                    <h3>To :  </h3>
+                    <h4>Admin</h4>
+                </div>
+                <button>Reply</button>
+            </div>
+            <hr>
+            <div class="msg">
+                <h3>Message : </h3>
+                <h4>Hello, i am writing this to admin</h4>
+            </div>
+        </div>
+        
+        -->
+        
+    </div>
+        
+</div>
+
+<div class="modal" *ngIf="showModal">
+    <div class="overlay hidden"></div>
+    <div class="form">
+        <div class="personal-info">
+            <!--
+                
+            <button class="close-modal" (click)="compose()" >&times;</button>
+            -->
+        <div class="input-div">
+            <label for="address">Role Id</label>
+            <input type="text" name="address" class="input-field" id="address" placeholder="Role Id"
+                required #roleId value="{{roleId3}}" >
+        </div>
+        <div class="input-div">
+            <label for="address">Message</label>
+            <textarea class="textarea"
+                    rows="4"
+                    columns="50"
+                    placeholder="Write Your message here"
+                    
+                    #message
+            ></textarea>
+        </div>
+        <input type="submit" value="SEND" class="btn" (click)="addMessage()" >
+        </div>
+    </div>  
+</div>
+

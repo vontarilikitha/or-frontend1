@@ -1,0 +1,85 @@
+<img src="../../assets/login/pexels-pixabay-461064.jpg"  class="im" alt="">
+<br><br><br>
+<img src="../../assets/banner4.png" alt="" class="banner">
+<div class="parent">
+    <h2 class="title">Job Details</h2>
+    <div class="add-job">
+        <form action="javascript:void(0)" class="job-form">
+            <div class="input-div">
+                <label for="">Role Id<div class="star">&nbsp;*</div></label>
+                <input type="text"
+                placeholder="Enter your Role Id"
+                class="input-field"
+                #roleId
+                >
+                
+            </div>
+
+            <div class="input-div">
+                <label for="">Job Name<div class="star">&nbsp;*</div></label>
+                <input type="text"
+                placeholder="Enter the Job Name"
+                class="input-field"
+                #jobName
+                >
+            </div>
+            <div class="nationality">
+                <label for="nationality">Job Type<div class="star">&nbsp;*</div></label>
+                <select name="nationality" id="nationality" required #jobType>
+                    <option value="fullTime">Full Time</option>
+                    <option value="partTime">Part Time</option>
+                </select>
+            </div>
+            <div class="input-div">
+                <label for="">Job Description<div class="star">&nbsp;*</div></label>
+                <textarea class="textarea"
+                rows="4"
+                columns="50"
+                placeholder="brief job Description"
+                
+                #jobDescription
+                ></textarea>
+            </div>
+            <div class="input-div">
+                <label for="">Job Salary<div class="star">&nbsp;*</div></label>
+                <input type="text"
+                placeholder="annual salary in 1000's"
+                class="input-field"
+                #salary
+                >
+            </div>
+            <div class="input-div">
+                <label for="">Company<div class="star">&nbsp;*</div></label>
+                <input type="text"
+                placeholder="Enter your Company Name"
+                class="input-field"
+                #companyName
+                >
+            </div>
+            <div class="input-div">
+                <label for="">Job Location<div class="star">&nbsp;*</div></label>
+                <input type="text"
+                placeholder="Enter job location"
+                class="input-field"
+                #jobLocation
+                >
+            </div>
+            <div class="input-div">
+                <label for="">Job Vacancy<div class="star">&nbsp;*</div></label>
+                <input type="text"
+                placeholder="Enter no of openings"
+                class="input-field"
+                #jobVacancy
+                >
+            </div>
+
+            
+            <div class="agree">
+                <h4>Terms & Conditions : </h4>
+                <p> <input type="checkbox"  (click)="agreeClicked()"> I accept the Terms and Conditions of JobSeekho. I declare that the details provided are correct and not for entertainment purpose.</p> 
+            </div>
+
+            <input type="submit" class="btn"  *ngIf="isAgree" (click)="storeJob()">
+        </form>
+    </div>
+</div>

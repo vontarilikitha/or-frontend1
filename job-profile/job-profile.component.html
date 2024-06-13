@@ -1,0 +1,121 @@
+<img src="../../assets/login/pexels-pixabay-461064.jpg" alt="">
+<div class="parent" *ngIf="showModal!=true">
+    <h1>Job Profile</h1>
+
+    <div class="employer-details">
+        <div class="employer-info">
+            <div class="header">
+                <div class="name">
+                    <h3>{{jobName}}</h3>
+                </div>
+
+                <div class="btn">
+                    <button (click)="deleteJob()"  *ngIf="this.dataService.isAdmin"  >Remove Job</button>
+                    <button class="green" (click)="editJob()"  *ngIf="this.dataService.isAdmin != true"   >Edit Job</button>
+                </div>
+                
+            </div>
+            <hr>
+            <div class="all-details">
+                <div class="details">
+                    <i class="fa-solid fa-person-half-dress"></i>
+                    <div class="d1">
+                        <h4>Employer</h4>
+                        <p>{{employer}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa fa-id-badge"></i>
+                    <div class="d1">
+                        <h4>Role Id</h4>
+                        <p>{{roleId}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-money-bill"></i>
+                    <div class="d1">
+                        <h4>Salary</h4>
+                        <p>{{salary}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-industry"></i>
+                    <div class="d1">
+                        <h4>company</h4>
+                        <p>{{company}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="d1">
+                        <h4>Location</h4>
+                        <p>{{location}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-people-group"></i>
+                    <div class="d1">
+                        <h4>Vacancy</h4>
+                        <p>{{vacancy}}</p>
+                    </div>
+                </div>
+                <div class="details">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <div class="d1">
+                        
+                        <h4>
+                            Description
+                        </h4>
+                        <p>{{description}}</p>
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="edit-employer" *ngIf="showModal">
+    <div class="employer-form">
+        
+        <div class="unchanged">
+            <label for="">Job Name</label>
+            <p>{{jobName}}</p>
+        </div>
+        <div class="unchanged">
+            <label for="">Employer</label>
+            <p>{{employer}}</p>
+        </div>
+        <div class="unchanged">
+            <label for="">Role Id</label>
+            <p>{{roleId}}</p>
+        </div>
+
+        <div class="input-div">
+            <label for="">Salary</label>
+            <input type="text" class="input-field" placeholder="salary" #salary1>
+        </div>
+
+        <div class="input-div">
+            <label for="">company</label>
+            <input type="text" class="input-field" placeholder="company" #company1>
+        </div>
+        <div class="input-div">
+            <label for="">Location</label>
+            <input type="text" class="input-field" placeholder="location" #location1>
+        </div>
+        <div class="input-div">
+            <label for="">Vacancy</label>
+            <input type="text" class="input-field" placeholder="vacany" #vacancy1>
+        </div>
+        <div class="input-div">
+            <label for="">Description</label>
+            <input type="text" class="input-field" placeholder="Description" #description1>
+        </div>
+        <button class="btn green" (click)="edit()">Save</button>
+    </div>
+    
+</div>
+<br><br><br>
+
